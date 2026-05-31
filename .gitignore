@@ -277,3 +277,10 @@ packages/database/generated
 .contentlayer
 .content-collections
 .source
+# Local secrets
+.env
+.env.local
+.env.*.local
+apps/*/.env
+apps/*/.env.local
+apps/*/.env.*.local
