@@ -284,3 +284,7 @@ packages/database/generated
 apps/*/.env
 apps/*/.env.local
 apps/*/.env.*.local
+
+# Build artifacts - never commit, contains baked credentials
+apps/app/.open-next/
+apps/app/.wrangler/

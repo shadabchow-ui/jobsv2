@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
+'use client';
+
 import { mockCandidateProfile, mockJobs, scoreJobs } from "@/lib/jobs";
 import { Header } from "../../components/header";
 import { MatchCard } from "../components/match-card";
-
-export const metadata: Metadata = {
-  title: "AI Job Match — Jobs",
-  description: "AI-powered job matching based on your profile.",
-};
 
 const MatchPage = () => {
   const results = scoreJobs(mockJobs, mockCandidateProfile);

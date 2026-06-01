@@ -1,4 +1,3 @@
-import { auth, currentUser } from "@repo/auth/server";
 import { SidebarProvider } from "@repo/design-system/components/ui/sidebar";
 import { secure } from "@repo/security";
 import type { ReactNode } from "react";
@@ -16,15 +15,10 @@ const AppLayout = async ({ children }: AppLayoutProperties) => {
     await secure(["CATEGORY:PREVIEW"]);
   }
 
-  const user = await currentUser();
-  const { redirectToSignIn } = await auth();
-
-  if (!user) {
-    return redirectToSignIn();
-  }
+  const userId = "";
 
   return (
-    <NotificationsProvider userId={user.id}>
+    <NotificationsProvider userId={userId}>
       <SidebarProvider>
         <GlobalSidebar>{children}</GlobalSidebar>
       </SidebarProvider>
